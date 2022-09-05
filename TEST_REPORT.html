@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head> <link rel="stylesheet" type="text/css" href="hmm_report.css">
+
+</head>
+
+<body>
+    <h2>PAIRWISE TEST REPORT</h2>    <h2> Function name: CDateToNumber(int,int,int)</h2><br />    <div class="table-wrapper">
+        <table class="fl-table">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Test Data</th>
+                </tr>
+            </thead>
+            <tbody><tr><td>1</td><td>(day=1765881808;month=-960122496;year=-1630691205)</td></tr><tr><td>2</td><td>(day=1765881808;month=-960122496;year=1041873326)</td></tr></tbody></table></div>    <div class="table-wrapper">
+        <table class="fl-table">
+            <thead>
+                <tr>
+                    <th>Coverage information</th>
+                </tr>
+            </thead>
+            <tbody>        <tr><td>Time: 12.96 ms</td></tr>
+        <tr><td>Memory: 10.19 MB</td></tr>
+   </tbody>
+        </table></div>
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <thead>
+                <tr>
+                    <th>Function raw signature</th>
+                </tr>
+            </thead>
+            <tbody><tr><td><pre>long CDateToNumber(int day,int month,int year)
+{
+int ngay[13] = {0,31,28,31,30,31,30,31,31,30,31,30,31};
+long s, i;
+s=0;
+if (year > 1900)
+{
+	s=s+day;
+	for (i=0; i < month; i++) s=s+ngay[i];
+}
+else
+	if (year>1900)
+	{
+		s=s+day;
+		s= s+(year-1900)*365;
+		for (i=1900; i <= year; i++)
+			if (((i%4==0)&&(i%100!=0))||(i%400==0)) s=s+1;
+		for (i=0; i < month; i++)
+		{
+			s= s+ngay[i];
+			if (((i%4==0)&&(i%100!=0)||(i%400==0))&&(i==2)) s=s+1;
+		}
+	}
+return s;
+}</pre></td></tr></tbody></table></div></body></html>

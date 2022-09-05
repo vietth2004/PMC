@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<modules>
+		<module>cia-api</module>
+		<module>cia-cpp</module>
+		<module>cia-display</module>
+		<module>data-struct</module>
+		<module>file-system</module>
+	</modules>
+	<parent>
+		<groupId>uet.fit</groupId>
+		<artifactId>cia-aut</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<dependencies>
+		<dependency>
+			<groupId>org.jetbrains</groupId>
+			<artifactId>annotations</artifactId>
+			<version>23.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.cdt</groupId>
+			<artifactId>org.eclipse.cdt.core</artifactId>
+			<version>7.3.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.collections</groupId>
+			<artifactId>eclipse-collections</artifactId>
+			<version>11.0.0</version>
+		</dependency>
+	</dependencies>
+
+	<groupId>uet.fit.cia</groupId>
+	<artifactId>cia</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+</project>

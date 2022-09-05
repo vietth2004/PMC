@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox prefHeight="147.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.PairwiseUI">
+<children>
+    <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0">
+        <children>
+            <AnchorPane prefHeight="351.0" prefWidth="600.0">
+                <children>
+                    <Label layoutX="22.0" layoutY="18.0" text="Source folder" />
+                    <TextField fx:id="txtSourceFolder" editable="false" layoutX="120.0" layoutY="14.0" prefHeight="25.0" prefWidth="363.0" />
+                    <Button fx:id="btnBrowseInput" layoutX="487.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnBrowseInput_Clicked" prefHeight="25.0" prefWidth="106.0" text="Browse" />
+<!--                    <Label layoutX="22.0" layoutY="111.0" text="Max loop" />-->
+<!--                    <TextField fx:id="txtMaxLoop" layoutX="120.0" layoutY="107.0" prefHeight="25.0" prefWidth="37.0" text="1" />-->
+                    <Label layoutX="22.0" layoutY="58.0" text="Choose function" />
+                    <ComboBox fx:id="cboSelectedFunction" layoutX="120.0" layoutY="54.0" prefHeight="25.0" prefWidth="363.0" />
+
+                    <Button fx:id="btnGetFunctionList" layoutX="488.0" layoutY="54.0" mnemonicParsing="false" onAction="#btnGetFunctionList_Clicked" prefHeight="25.0" prefWidth="106.0" text="Get function list" />
+                    <Button fx:id="btnPairwise" layoutX="120.0" layoutY="168.0" mnemonicParsing="false" onAction="#btnPairwise_Clicked" prefHeight="40.0" prefWidth="87.0" text="Pairwise" visible="true" />
+                    <Button fx:id="btnCombination" layoutX="233.0" layoutY="168.0" mnemonicParsing="false" onAction="#btnCombination_Clicked" prefHeight="40.0" prefWidth="113.0" text="Combination" visible="true" />
+                    <Button fx:id="btnViewReport" layoutX="419.0" layoutY="168.0" mnemonicParsing="false" onAction="#btnViewReport_Clicked" prefHeight="40.0" prefWidth="78.0" text="View report" />
+                </children>
+            </AnchorPane>
+        </children>
+        <HBox.margin>
+            <Insets />
+        </HBox.margin>
+    </VBox>
+</children>
+</HBox>

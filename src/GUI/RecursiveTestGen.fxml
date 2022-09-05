@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="243.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.RecursiveTestGen">
+   <children>
+      <Label layoutX="11.0" layoutY="14.0" text="Source Folder v1:" />
+      <Label layoutX="14.0" layoutY="123.0" text="Select Function:" />
+      <TextField fx:id="txtSourceFolder" layoutX="107.0" layoutY="10.0" prefHeight="25.0" prefWidth="418.0" />
+      <Button fx:id="btnBrowse" layoutX="534.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnBrowseInput_Clicked" text="Browse" />
+      <ComboBox fx:id="cbFunctionList" layoutX="107.0" layoutY="119.0" prefHeight="25.0" prefWidth="295.0" />
+      <Button fx:id="btnGetFunctionList" layoutX="416.0" layoutY="119.0" mnemonicParsing="false" onAction="#btnGetFunctionList_Clicked" text="Get functions list" />
+      <TextField fx:id="txtMaxLoop" layoutX="107.0" layoutY="157.0" prefHeight="25.0" prefWidth="55.0" />
+      <Label layoutX="14.0" layoutY="161.0" text="Max loop:" />
+      <Button fx:id="btnClose" layoutX="536.0" layoutY="205.0" mnemonicParsing="false" onAction="#btnClose_Clicked" text="Close" />
+      <Button fx:id="btnGenerateTestData" layoutX="175.0" layoutY="205.0" mnemonicParsing="false" onAction="#btnGenerateTestData_Clicked" prefHeight="25.0" prefWidth="220.0" text="Generate test data" />
+      <Button fx:id="btnViewReport" layoutX="416.0" layoutY="205.0" mnemonicParsing="false" onAction="#btnViewReport_Clicked" prefHeight="25.0" prefWidth="91.0" text="View report" />
+      <Label layoutX="175.0" layoutY="161.0" text="Coverage type:" />
+      <ComboBox fx:id="cbCoverageType" layoutX="270.0" layoutY="157.0" prefHeight="25.0" prefWidth="132.0" />
+      <Label layoutX="11.0" layoutY="53.0" text="Source Folder v2:" />
+      <TextField fx:id="txtSourceFolderv2" layoutX="107.0" layoutY="49.0" prefHeight="25.0" prefWidth="418.0" />
+      <Button fx:id="btnBrowsev2" layoutX="534.0" layoutY="49.0" mnemonicParsing="false" onAction="#btnBrowseInputv2_Clicked" text="Browse" />
+      <Label layoutX="14.0" layoutY="88.0" prefHeight="17.0" prefWidth="578.0" text="We only get functions which contain branches and there must be some differences between the two versions" textFill="#ffa100" />
+      <ProgressIndicator fx:id="progressIndicator" layoutX="536.0" layoutY="120.0" progress="0.0" />
+   </children>
+</AnchorPane>
